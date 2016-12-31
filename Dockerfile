@@ -2,10 +2,11 @@ FROM jetbrains/teamcity-agent:latest
 
 MAINTAINER Evgeny Zhivitsa
 
-sudo apt-get install software-properties-common
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install -yq ansible
+RUN apt-get update \
+  && apt-get install -yq software-properties-common \
+  && apt-add-repository ppa:ansible/ansible \
+  && apt-get update \
+  && apt-get install -yq ansible
 
 EXPOSE 9090
 
