@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-agent:2017.1.3
+FROM jetbrains/teamcity-agent:2017.1.4
 
 MAINTAINER Evgeny Zhivitsa
 
